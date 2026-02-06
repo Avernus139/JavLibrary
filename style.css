@@ -1,0 +1,183 @@
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+select {
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.movie {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.movie img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.movie img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile only: 2 posters per row */
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .movie p {
+    font-size: 14px;
+  }
+}
+/* Hamburger icon */
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c232b;
+  padding: 12px 16px;
+  color: white;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.top-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: #9cabb4;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Side menu (LEFT slide) */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: #111;
+  padding: 20px;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu h3 {
+  margin-top: 40px;
+  color: #f5c518;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 15px 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+/* Overlay (background dim) */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+/* Show overlay when menu opens */
+.menu-open #overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide top bar when menu is open */
+.menu-open .top-bar {
+  display: none;
+}
+.icon-img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* Search popup */
+.search-box {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  background: #111;
+  padding: 12px;
+  border-radius: 8px;
+  z-index: 1002;
+  display: none;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* Search overlay */
+#searchOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 1001;
+}
