@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="top-bar">
+  <div class="logo">🎬 Movie Library</div>
+
+  <div class="top-icons">
+    <button class="icon-btn" onclick="openSearch()">
+  <img src="login.png" class="icon-img">
+</button>
+   <button class="icon-btn" onclick="openSearch()">
+  <img src="search.png" class="icon-img">
+</button>
+    <button class="icon-btn" onclick="openMenu()">☰</button>
+  </div>
+</header>
+  
+
+  
+  
+
+<h1>🎬 Jav Library</h1>
+
+<select id="actorFilter">
+  <option value="all">All Actors</option>
+  <option value="Mary tachibana">Mary tachibana</option>
+  <option value="Mino suzume">Mino suzume</option>
+</select>
+  
+  
+
+<div class="movie-grid">
+  <a href="https://keepshare.org/3u7jketl/magnet%3A%3Fxt%3Durn%3Abtih%3A15b463c426278f13ae113950b17bd8b84c1ea057" target="_blank"
+     class="movie" data-actor="Mary tachibana">
+    <img src="https://cdn001.imggle.net/webp/poster/09052025/1760033603.webp" alt="Movie">
+    <p>JUR-552</p>
+  </a>
+
+  <a href="https://keepshare.org/3u7jketl/magnet%3A%3Fxt%3Durn%3Abtih%3Ac5eed1f5deb677f8aebcca6a52844195295fec01" target="_blank"
+     class="movie" data-actor="Mary tachibana">
+    <img src="https://cdn001.imggle.net/webp/poster/20230302/1680320646.webp" alt="Movie">
+    <p>GVH-528</p>
+  </a>
+  
+  <a href="https://keepshare.org/3u7jketl/magnet%3A%3Fxt%3Durn%3Abtih%3A890facf4678957b607243cfca10bf5c9169a977b" target="_blank"
+     class="movie" data-actor="Mary tachibana">
+    <img src="https://cdn001.imggle.net/webp/poster/20230206/1687490511.webp" alt="Movie">
+    <p>DASS-167</p>
+  </a>
+  
+  <a href="https://keepshare.org/3u7jketl/magnet%3A%3Fxt%3Durn%3Abtih%3A5c2b65b5ef45600a171ae0c3072220524274f2f8" target="_blank"
+     class="movie" data-actor="Mary tachibana">
+    <img src="https://cdn001.imggle.net/webp/poster/20230908/1696652798.webp" alt="Movie">
+    <p>DVAJ-631</p>
+  </a>
+  
+  <a href="https://keepshare.org/3u7jketl/magnet%3A%3Fxt%3Durn%3Abtih%3A890facf4678957b607243cfca10bf5c9169a977b" target="_blank"
+     class="movie" data-actor="Mary tachibana">
+    <img src="https://cdn001.imggle.net/webp/poster/20252204/1746728055.webp" alt="Movie">
+    <p>JUR-287</p>
+  </a>
+  
+  <a href="https://keepshare.org/3u7jketl/magnet%3A%3Fxt%3Durn%3Abtih%3A890facf4678957b607243cfca10bf5c9169a977b" target="_blank"
+     class="movie" data-actor="Mary tachibana">
+    <img src="https://cdn001.imggle.net/webp/poster/20230804/1692329443.webp" alt="Movie">
+    <p>DASS-221</p>
+  </a>
+</div>
+
+<script src="script.js"></script>
+  
+  <!-- Search Popup -->
+<div id="searchBox" class="search-box">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search movie…"
+    oninput="searchMovies()"
+  >
+</div>
+
+<!-- Overlay for search -->
+<div id="searchOverlay" onclick="closeSearch()"></div>
+
+</body>
+</html>
